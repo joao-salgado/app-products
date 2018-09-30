@@ -21,16 +21,16 @@
         <div class="col-12 col-sm-6">
           <div class="form-group">
             <label for="market">Target market:</label>
-            <ng-select class="custom" [items]="stackOptions" [multiple]="true"
-                        [(ngModel)]="stacks">
+            <ng-select class="custom" [items]="marketOptions" [multiple]="true"
+                        [(ngModel)]="markets" id="market">
             </ng-select>
           </div>
         </div>
         <div class="col-12 col-sm-6">
           <div class="form-group">
             <label for="stack">Stack:</label>
-            <ng-select class="custom" [items]="marketOptions" [multiple]="true"
-                        [(ngModel)]="markets">
+            <ng-select class="custom" [items]="stackOptions" [multiple]="true"
+                        [(ngModel)]="stacks" id="stack">
             </ng-select>
           </div>
         </div>
