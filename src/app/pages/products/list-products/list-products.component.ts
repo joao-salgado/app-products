@@ -31,12 +31,12 @@ export class ListProductsComponent {
 
     this.stackService.findAll()
     .subscribe(response => {
-      this.stackOptions = response.content.map(item => ({ label: item.name, value: item.id.toString() }));
+      this.stackOptions = response.map(item => ({ label: item.name, value: item.id.toString() }));
     });
 
     this.marketService.findAll()
     .subscribe(response => {
-      this.marketOptions = response.content.map(item => ({ label: item.name, value: item.id.toString() }));
+      this.marketOptions = response.map(item => ({ label: item.name, value: item.id.toString() }));
     });
   }
 
