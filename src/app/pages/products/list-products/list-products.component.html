@@ -23,16 +23,14 @@
         <div class="col-12 col-sm-6">
           <div class="form-group">
             <label for="market">Target market:</label>
-            <ng-select class="custom" [items]="marketOptions" [multiple]="true"
-                        [(ngModel)]="markets" id="market">
+            <ng-select class="custom" [items]="marketOptions" [multiple]="true" [(ngModel)]="markets" id="market">
             </ng-select>
           </div>
         </div>
         <div class="col-12 col-sm-6">
           <div class="form-group">
             <label for="stack">Stack:</label>
-            <ng-select class="custom" [items]="stackOptions" [multiple]="true"
-                        [(ngModel)]="stacks" id="stack">
+            <ng-select class="custom" [items]="stackOptions" [multiple]="true" [(ngModel)]="stacks" id="stack">
             </ng-select>
           </div>
         </div>
@@ -40,13 +38,26 @@
         <div class="col-12 text-center">
           <button class="btn btn-primary" (click)="search()">Search</button>
         </div>
+      </div>
 
+      <div class="row">
+        <div class="col-12 border" *ngFor="let product of products">
+
+          <p>Name: {{product?.name}}</p>
+          <p>Description: {{product?.description}}</p>
+
+          <p>Markets</p>
+          <ul>
+            <li *ngFor="let market of product?.markets">{{market}}</li>
+          </ul>
+
+          <p>Stacks</p>
+          <ul>
+            <li *ngFor="let stack of product?.stacks">{{stack}}</li>
+          </ul>
+
+        </div>
       </div>
     </fieldset>
   </div>
 </div>
-
-
-
-
-
