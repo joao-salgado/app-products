@@ -1,3 +1,50 @@
-<p>
-  list-products works!
-</p>
+<div class="row">
+  <div class="col-12">
+    <h2 class="text-center">List</h2>
+
+    <fieldset class="container">
+      <legend>Filter</legend>
+
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input class="form-control" [(ngModel)]="filter.name" type="text" id="name" />
+          </div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <input class="form-control" [(ngModel)]="filter.description" type="text" id="description" />
+          </div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="form-group">
+            <label for="market">Target market:</label>
+            <ng-select class="custom" [items]="stackOptions" [multiple]="true"
+                        [(ngModel)]="stacks">
+            </ng-select>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="form-group">
+            <label for="stack">Stack:</label>
+            <ng-select class="custom" [items]="marketOptions" [multiple]="true"
+                        [(ngModel)]="markets">
+            </ng-select>
+          </div>
+        </div>
+
+        <div class="col-12 text-center">
+          <button class="btn btn-primary" (click)="search()">Pesquisar</button>
+        </div>
+
+      </div>
+    </fieldset>
+  </div>
+</div>
+
+
+
+
+
