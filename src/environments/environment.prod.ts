@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'not-defined'
+  apiUrl: 'https://api-products-bis2bis.herokuapp.com'
 };
